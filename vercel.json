@@ -1,6 +1,5 @@
 {
-  "framework": "vite",
-  "outputDirectory": "dist",
+  "installCommand": "npm install && chmod -R +x node_modules/.bin",
   "rewrites": [
     {
       "source": "/(.*)",
