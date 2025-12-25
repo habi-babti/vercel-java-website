@@ -446,12 +446,26 @@ function Features() {
           
           <div className="themes-gallery">
             {[
-              { name: 'Material Dark', colors: ['#1e1e1e', '#bb86fc', '#03dac6'] },
-              { name: 'Google', colors: ['#ffffff', '#4285f4', '#ea4335'] },
-              { name: 'Cyberpunk', colors: ['#0d0d0d', '#ff2a6d', '#05d9e8'] },
-              { name: 'Forest', colors: ['#1a2f1a', '#4caf50', '#8bc34a'] },
-              { name: 'Ocean', colors: ['#0a1929', '#1976d2', '#4fc3f7'] },
-              { name: 'Sunset', colors: ['#1a1a2e', '#ff6b6b', '#feca57'] },
+              { name: 'Apple', colors: ['#000000', '#0071E3', '#F5F5F7', '#86868B'] },
+              { name: 'Cyberpunk 2077', colors: ['#0D0D0D', '#FCEE0A', '#00F0FF', '#FF003C'] },
+              { name: 'Material Dark', colors: ['#121212', '#2196F3', '#FF4081', '#FFC107'] },
+              { name: 'Deep Ocean', colors: ['#002329', '#006064', '#00BCD4', '#80DEEA'] },
+              { name: 'Forest Green', colors: ['#1B2D1B', '#4CAF50', '#8BC34A', '#69F0AE'] },
+              { name: 'Gemini', colors: ['#0F111A', '#4E8CFF', '#C98AFF', '#E4E6EB'] },
+              { name: 'Google', colors: ['#FFFFFF', '#4285F4', '#EA4335', '#34A853'] },
+              { name: 'GTA Vice City', colors: ['#1A0515', '#FF0099', '#00FFFF', '#FF9900'] },
+              { name: 'Lavender Dreams', colors: ['#F3E5F5', '#9575CD', '#7E57C2', '#D1C4E9'] },
+              { name: 'Material Light', colors: ['#FAFAFA', '#2196F3', '#FF4081', '#FFC107'] },
+              { name: 'Mars', colors: ['#210A05', '#D84315', '#FF7043', '#FFAB91'] },
+              { name: 'Microsoft', colors: ['#FFFFFF', '#00A4EF', '#7FBA00', '#737373'] },
+              { name: 'Mistral', colors: ['#FFF7ED', '#FDBA74', '#F59E0B', '#D97706'] },
+              { name: 'Moon', colors: ['#121212', '#E0E0E0', '#BBDEFB', '#9E9E9E'] },
+              { name: 'Night', colors: ['#000000', '#1A237E', '#304FFE', '#FFD600'] },
+              { name: 'Ocean Blue', colors: ['#0D1B2A', '#0288D1', '#00BCD4', '#00E5FF'] },
+              { name: 'Samsung', colors: ['#FFFFFF', '#1428A0', '#2196F3', '#000000'] },
+              { name: 'Slate Minimalist', colors: ['#ECEFF1', '#607D8B', '#90A4AE', '#455A64'] },
+              { name: 'Sunrise', colors: ['#FFF3E0', '#FF5722', '#FFC107', '#E91E63'] },
+              { name: 'Xiaomi', colors: ['#F5F5F5', '#FF6900', '#FF4400', '#333333'] },
             ].map((theme, index) => (
               <motion.div
                 key={theme.name}
@@ -459,12 +473,17 @@ function Features() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.05 }}
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="theme-colors">
                   {theme.colors.map((color, i) => (
-                    <div key={i} className="color-swatch" style={{ background: color }}></div>
+                    <div 
+                      key={i} 
+                      className="color-swatch" 
+                      style={{ background: color }}
+                      data-color={color}
+                    ></div>
                   ))}
                 </div>
                 <span className="theme-name">{theme.name}</span>
